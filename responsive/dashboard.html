@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        body
+        {
+            min-height: 100vh;
+
+        }
+        .sidebar
+        {
+            position: fixed;
+            background: #181818;
+            width: 20vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .brand
+        {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid lightgray;
+            margin-bottom: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .brand i
+        {
+            font-size: 20px;
+        }
+        .sidebar ul li
+        {
+            font-size: 24px;
+            padding: 10px 40px;
+
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover
+        {
+            background: rgba(0, 0, 0, 0.2);
+            color: limegreen;
+        }
+        .container
+        {
+            position: absolute;
+            right: 0;
+            width: 80vw;
+            height: 100vh;
+        }
+        .content
+        {
+            position: relative;
+            margin-top: 10vh;
+            min-height: 90vh;
+            background: lightskyblue;
+        }
+        .cards
+        {
+            padding: 15px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .card
+        {
+            width: 230px;
+            height: 130px;
+            background: white;
+            margin: 15px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-sizing: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        }
+        .box h1
+        {
+            color: green;
+        }
+        .icon
+        {
+            color: gray;
+            font-size: 40px;
+        }
+        i:hover
+        {
+            color: limegreen;
+        }
+        .content-2
+        {
+            min-height: 60vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .payments
+        {
+            min-height: 20vh;
+            flex: 5;
+            background: white;
+            margin: 0 25px 25px 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: column;
+        }
+        .title
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 15px 10px;
+            border-bottom: 2px solid #999;
+        }
+       table
+       {
+        padding: 10px;
+       }
+       th, td
+       {
+        text-align: left;
+        padding: 8px;
+       }
+       .students
+       {
+        flex: 2;
+        background: white;
+        min-height: 50vh;
+        margin: 0 25px;;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: flex;
+        flex-direction: column;
+       }
+       .students table td i
+       {
+        font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">
+            <i class="fa-solid fa-qrcode"></i>&nbsp;&nbsp;
+            <h1>Administrator</h1>
+        </div>
+        <ul>
+            <li><i class="fa-solid fa-house"></i>&nbsp;&nbsp;<span>Dashboard</span></li>
+            <li><i class="fa-solid fa-folder"></i>&nbsp;&nbsp;<span>Data</span></li>
+            <li><i class="fa-solid fa-circle-user"></i>&nbsp;&nbsp;<span>Karyawan</span></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>3279</h1>
+                        <h3>Semua Data</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>3279</h1>
+                        <h3>Data Karyawan</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>3279</h1>
+                        <h3>Absen</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="payments">
+                    <div class="title">
+                        <h2>Data Karyawan</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Kegiatan</th>
+                            <th>Tanggal</th>
+                            <th>Keterangan</th>
+                        </tr>
+                        <tr>
+                            <td>Niscita</td>
+                            <td>Belajar</td>
+                            <td>10-28-23</td>
+                            <td>Sakit</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
